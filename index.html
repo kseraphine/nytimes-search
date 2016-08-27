@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>NY Times Search</title>
+	<meta charset="UTF-8">
+	<title>New York Times Search</title>
+	
+	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-
 </head>
 <body>
+
 <div class="container">
-	
+
+	<!-- Jumbotron  -->
 	<div class="jumbotron">
-		<h1><span class="glyphicon glyphicon-search" aria-hidden="true"></span> New York Times Search</h1>
+		<h1>New York Times Search</h1>
 	</div>
 
-	<div class="row"></div>
+	<div class="row">
+		
+		<!-- Search Parameters Panel  -->
 		<div class="col-lg-12">
 			<div class="panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title">Search Parameters</h3>
 					</div>
 					<div class="panel-body">
-						<form>
+						<form role="form">
 
 						  <div class="form-group">
-						    <label>Search Term:</label>
+						    <label for="search">Search Term:</label>
 						    <input type="text" class="form-control" id="search">
 						  </div>
 
 							<div class="form-group">
-							  <label>Number of Records to Retrieve:</label>
+							  <label for="numRecords">Number of Records to Retrieve:</label>
 							  <select class="form-control" id="numRecords">
 							    <option value=1>1</option>
 							    <option value=5 selected>5</option>
@@ -38,12 +42,12 @@
 							</div>
 
 						  <div class="form-group">
-						    <label>Start Year:</label>
+						    <label for="startYear">Start Year:</label>
 						    <input type="text" class="form-control" id="startYear">
 						  </div>
 
 						  <div class="form-group">
-						    <label>End Year:</label>
+						    <label for="endYear">End Year:</label>
 						    <input type="text" class="form-control" id="endYear">
 						  </div>
 
@@ -54,7 +58,31 @@
 					</div>
 				</div>				
 		</div>
+	</div>
+
+	<div class="row">
+		<!-- Results Panel -->
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Search Results</h3>
+					</div>
+					<div class="panel-body" id="wellSection">
+
+					</div>
+				</div>	
+		</div>
+	</div>
 
 </div>
+
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Logic.js -->
+<script src="logic.js"></script>
+
+
+	
 </body>
 </html>
