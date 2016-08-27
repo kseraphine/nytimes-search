@@ -6,23 +6,25 @@ var querylist = "";
 
 
 
-function run(numArticles, queryURL){
+$("#searchBtn").click(queryURL)
 	$.ajax({url: queryURL, method: "GET"})
 		.done(function(data) {
 
-			$(div).empty();
+			$(".articles").empty();
 
-			for (var i = 0; i < numArticles; i++) {
-				
-			}
-		}
+			console.log("------------------");
+			console.log(queryURL);
+			console.log("------------------");
+			console.log();
+			console.log(data);
+
+			
 		
 
 
+		})
 
 
 
 
 
-
-}
