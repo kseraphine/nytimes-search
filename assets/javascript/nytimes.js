@@ -6,8 +6,16 @@ var querylist = "";
 
 
 
-function(){
+function run(numArticles, queryURL){
 	$.ajax({url: queryURL, method: "GET"})
+		.done(function(data) {
+
+			$(div).empty();
+
+			for (var i = 0; i < numArticles; i++) {
+				
+			}
+		}
 		
 
 
